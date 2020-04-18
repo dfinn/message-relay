@@ -1,0 +1,2 @@
+docker build . -t message_relay
+docker run -p 3000:3000 -it -e API_KEY=12345 --name message_relay --rm --init message_relay
