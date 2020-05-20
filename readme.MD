@@ -62,9 +62,6 @@ socket.on('message', (data) => {
 ```
 const io = require('socket.io-client');
 const socket = io('http://localhost:3000');
-socket.emit('message', {'api_key': '12345', 'command': 'subscribe', 'topic': 'status'});
-socket.on('message', (data) => {
-  console.log('Received: %j', data);
-});
+socket.emit('message', {'api_key': '12345', 'command': 'publish', 'topic': 'status', 'data': {'battery_level': 95}});
 ```
 
